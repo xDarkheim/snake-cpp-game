@@ -1,5 +1,5 @@
 <div align="center">
-  <img src="DarkSnake.png" alt="Dark Snake Logo" width="200"/>
+  <img src="DarkSnake.png" alt="Dark Snake Logo" width="256"/>
 
   **A modern Snake game built with C++ and SFML**
 </div>
