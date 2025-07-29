@@ -1,42 +1,49 @@
-# 🐍 Snake Game
+<div align="center">
+  <img src="DarkSnake.png" alt="Dark Snake Logo" width="200"/>
 
-Classic Snake game implemented in C++ with a console interface.
+  **A modern Snake game built with C++ and SFML**
+</div>
 
-## 📁 Project Structure
-- `main.cpp` — Entry point
-- `Game.*` — Game logic and rendering
-- `Snake.*` — Snake class implementation
-- `Food.*` — Food generation system
-- `Point.h` — Coordinate structure
-- `Direction.h` — Direction enumeration
-- `best_score.txt` — High score storage
-- `CMakeLists.txt` — Build configuration
+## ✨ Features
+- Modern graphics with SFML
+- WASD/Arrow key controls  
+- Score tracking with best score persistence
+- Menu and pause functionality
+- Smooth collision detection
 
-## 🛠️ Requirements
-- C++11 or higher
+## 📋 Requirements
+- C++17+
 - CMake 3.10+
-- Linux/Unix terminal
+- SFML 2.5+
 
-## 🎮 Features
-- Console-based graphics
-- WASD controls
-- Food generation
-- Collision detection
-- Growing snake mechanics
-- Score tracking
-- Best score persistence
-
-## 🎯 Controls
-- W — Move up
-- S — Move down
-- A — Move left
-- D — Move right
-- Q — Quit game
-
-## 📦 Build and Run
+## 🚀 Quick Start
 ```bash
+# Install dependencies (Ubuntu/Debian)
+sudo apt install cmake build-essential libsfml-dev
+
+# Build and run
 mkdir build && cd build
-cmake ..
-make
+cmake .. && make
 ./Snake
 ```
+
+## 🎮 Controls
+- **WASD/Arrows** — Move
+- **Space** — Pause
+- **Enter** — Menu select
+- **Escape** — Menu/Quit
+
+## 📁 Structure
+```
+Snake/
+├── src/           # Source files
+├── include/       # Headers  
+├── assets/        # Game assets
+└── CMakeLists.txt # Build config
+```
+
+## 🤝 Contributing
+Feel free to submit issues and pull requests!
+
+## 📄 License
+MIT License - see [LICENSE](LICENSE) file.

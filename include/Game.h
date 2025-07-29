@@ -53,7 +53,7 @@ public:
                 MenuButton* startBtn = nullptr,
                 MenuButton* exitBtn = nullptr,
                 MenuButton* restartBtn = nullptr,
-                MenuButton* menuBtn = nullptr);
+                MenuButton* menuBtn = nullptr) const;
 
     bool isGameOver() const { return gameOver; }
     int getScore() const { return score; }

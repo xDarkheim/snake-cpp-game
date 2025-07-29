@@ -21,7 +21,7 @@ void Game::run()
 {
     sf::RenderWindow window(sf::VideoMode(BOARD_WIDTH * CELL_SIZE, BOARD_HEIGHT * CELL_SIZE + 60), "Snake Game");
     sf::Clock clock;
-    float timer = 0.0f, delay = 0.15f;
+    float timer = 0.0f;
 
     // Menu buttons initialization
     MenuButton startBtn, exitBtn, restartBtn, menuBtn;
@@ -57,7 +57,8 @@ void Game::run()
 
         if (!paused && !gameOver && !inMenu)
         {
-            timer += clock.restart().asSeconds();
+          float delay = 0.15f;
+          timer += clock.restart().asSeconds();
             if (timer > delay)
             {
                 update();
@@ -213,8 +214,7 @@ void Game::processEvent(const sf::Event& event, sf::RenderWindow* window,
 // Rendering with interactive menu buttons and centered text
 void Game::render(sf::RenderWindow& window,
                   MenuButton* startBtn, MenuButton* exitBtn,
-                  MenuButton* restartBtn, MenuButton* menuBtn)
-{
+                  MenuButton* restartBtn, MenuButton* menuBtn) const {
     // Draw gradient background
     sf::VertexArray background(sf::Quads, 4);
     background[0].position = sf::Vector2f(0, 0);
@@ -477,11 +477,10 @@ void Game::loadBestScore()
         bestScore = 0;
 }
 
-void Game::saveBestScore()
-{
-    std::ofstream out(BEST_SCORE_FILE);
-    if (out)
-        out << bestScore;
+void Game::saveBestScore() {
+  std::ofstream out(BEST_SCORE_FILE);
+  if (out)
+    out << bestScore;
 }
 
 void Game::reset()
